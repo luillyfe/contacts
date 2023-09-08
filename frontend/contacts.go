@@ -44,3 +44,17 @@ var contacts = []Contact{
 func ListContacts(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, contacts)
 }
+
+// GetContact will return the contact given its id.
+func GetContact(c *gin.Context) {
+	id := c.Param("id")
+
+	for _, contact := range contacts {
+		if contact.ID == id {
+			c.IndentedJSON(http.StatusOK, contact)
+			return
+		}
+	}
+
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Contact not found!"})
+}
