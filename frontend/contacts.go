@@ -58,3 +58,14 @@ func GetContact(c *gin.Context) {
 
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Contact not found!"})
 }
+
+// Create a new Contact.
+func CreateContact(c *gin.Context) {
+	var contact Contact
+	if err := c.BindJSON(&contact); err != nil {
+		return
+	}
+
+	contacts = append(contacts, contact)
+	c.IndentedJSON(http.StatusOK, contact)
+}

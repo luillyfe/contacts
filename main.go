@@ -11,6 +11,8 @@ func main() {
 
 	// to associate the GET http method and the "/contacts" path to a handler function
 	router.GET("/contacts", frontend.ListContacts)
+	// to bind the POST http method and the "/contacts" path to a handler function
+	router.POST("/contacts", frontend.CreateContact)
 	// to bind the GET http method and the "/contact/:id" path to a handler function
 	router.GET("/contacts/:id", frontend.GetContact)
 
