@@ -1,18 +1,19 @@
-# Contact API
+# Contacts API
 
 This repository contains a simple API that allows users to create, read, update, and delete contacts.
 
-Features
-Create a new contact
-Get a specific contact by ID
-Update a specific contact by ID
-Delete a specific contact by ID
+## Features
+
+- Create a new contact
+- Get a specific contact by ID
+- Update a specific contact by ID
+- Delete a specific contact by ID
 
 ## Installation
 
-To install the API, you will need to have Python 3 installed. You can then install the dependencies by running the following command:
+To install the API, you will need to have Go installed. You can then install the dependencies by running the following command:
 
-go get .
+`go get .`
 
 ## Usage
 
@@ -41,3 +42,7 @@ If you would like to contribute to the API, please fork the repository and submi
 ## License
 
 The API is licensed under the MIT License.
+
+```
+
+```
