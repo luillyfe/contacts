@@ -87,3 +87,18 @@ func UpdateContact(c *gin.Context) {
 
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Contact not found!"})
 }
+
+// Deletes a contact.
+func DeleteContact(c *gin.Context) {
+	id := c.Param("id")
+
+	for i, contact := range contacts {
+		if contact.ID == id {
+			contacts = append(contacts[:i], contacts[i+1:]...)
+			c.IndentedJSON(http.StatusOK, gin.H{"message": "Contact deleted with success"})
+			return
+		}
+	}
+
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Coudn't find contact!"})
+}
