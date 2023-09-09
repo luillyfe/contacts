@@ -15,6 +15,8 @@ func main() {
 	router.POST("/contacts", frontend.CreateContact)
 	// to bind the GET http method and the "/contact/:id" path to a handler function
 	router.GET("/contacts/:id", frontend.GetContact)
+	// to bind the POST http method and the "/contact/:id" path to a handler function
+	router.POST("/contacts/:id", frontend.UpdateContact)
 
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(201, gin.H{"message": "Server working as expected!"})
