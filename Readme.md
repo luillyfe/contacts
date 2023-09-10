@@ -33,7 +33,15 @@ For more documentation, please see the following:
 
 - [README file](README.md)
 - [Tutorial](tutorial.md)
-- [Blog post](blog_post.md)
+- [Blog post](https://luillyfe.medium.com/building-rest-apis-in-google-cloud-6498aea274ea)
+
+## Turorial
+
+To deploy this to Cloud the API to Cloud Endpoints use,
+`gcloud endpoints services deploy swagger.yaml`
+
+To the deploy the backend API use,
+`gcloud app deploy`
 
 ## Contributing
 
