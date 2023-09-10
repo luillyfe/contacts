@@ -1,0 +1,15 @@
+runtime: go
+env: flex
+
+endpoints_api_service:
+  # The following values are to be replaced by information from the output of
+  # 'gcloud endpoints services deploy openapi-appengine.yaml' command.
+  name: dauntless-arc-398505.appspot.com
+  rollout_strategy: managed
+
+manual_scaling:
+  instances: 1
+
+runtime_config:
+  operating_system: "ubuntu22"
+  runtime_version: "1.21"

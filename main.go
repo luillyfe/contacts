@@ -25,5 +25,5 @@ func main() {
 	})
 
 	// run on port 80
-	router.Run(":80")
+	router.Run(":8080")
 }
