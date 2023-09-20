@@ -7,6 +7,10 @@ info:
 host: "dauntless-arc-398505.appspot.com"
 schemes:
   - "https"
+# Restricting access to all API methods
+security:
+  # the OpenAPI specification requeries an empty list for security schemes that don't use Oauth
+  - api_key: []
 paths:
   "/contacts":
     get:
@@ -138,3 +142,10 @@ definitions:
         format: int32
       message:
         type: string
+
+securityDefinitions:
+  # building a security scheme to protect the API
+  api_key:
+    type: "apiKey"
+    name: "key"
+    in: "query"
