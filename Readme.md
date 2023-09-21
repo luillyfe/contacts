@@ -27,6 +27,10 @@ To use the API, you will need to make HTTP requests to the following endpoints:
 
 The requests should be made in JSON format. The response will also be in JSON format.
 
+## Security
+
+It has been added a restriction access to just acept request that includes an API key. You must be able to create yours, from the [APIs & Services](https://console.cloud.google.com/apis/dashboard) section in Google Cloud Console. When generating the API key, make sure to limit it to just the API in development (Contacts API fro this case). [See building secure APIs in Google Cloud](https://medium.com/@luillyfe/securing-cloud-endpoints-with-api-keys-d16c00f77e5c).
+
 ## Documentation
 
 For more documentation, please see the following:
