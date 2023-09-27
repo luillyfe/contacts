@@ -11,6 +11,7 @@ schemes:
 security:
   # the OpenAPI specification requeries an empty list for security schemes that don't use Oauth
   - api_key: []
+  - firebase: []
 paths:
   "/contacts":
     get:
@@ -149,3 +150,11 @@ securityDefinitions:
     type: "apiKey"
     name: "key"
     in: "query"
+  # to support Firebase authentication
+  firebase:
+    authorizationUrl: ""
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://securetoken.google.com/dauntless-arc-398505"
+    x-google-jwts_uri: "https://www.googleapis.com/service_accounts/v1/metadata/x509/securetoken@system.gserviceaccount.com"
+    x-google-audiences: "dauntless-arc-398505"
